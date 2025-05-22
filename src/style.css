@@ -1,8 +1,35 @@
-@import "tailwindcss";
-@import "./common/theme.css";
+@import 'tailwindcss';
+/* @import "./common/theme.css"; */
 /* 수동으로 다크모드 적용을 하는 경우 
 @custom-variant dark (&:where(.dark, .dark *)); */
 
 /* :root {
   --color-likelion: oklch(0.72 0.11 178);
 } */
+
+@theme {
+  --pretendard: "Pretendard Variable", Pretendard, sans-serif;
+  --color-like: red;
+  --color-lion: green;
+  --color-likelion-black: #303033 ;
+  --color-likelion-red: #b02c20 ;
+  --color-likelion-green: #5bdc76 ;
+  --building: url(../src/assets/images/building.avif);
+}
+
+@layer components {
+  .bootcamp {
+    background-color: orange;
+    padding: 1em;
+    margin-block: 1em;
+    border: 5px solid blue;
+  }
+
+  .like {
+    @apply border-4 border-red-500 m-4 p-4 bg-violet-300;
+  }
+}
+
+@utility shape-circle {
+  shape-outline: circle(50%);
+}
